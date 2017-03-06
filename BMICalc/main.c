@@ -8,8 +8,46 @@
 
 #include <stdio.h>
 
+typedef struct  {
+    float heightinMeters;
+    int weightinKilos;
+    
+
+}Person;
+
+
+float BMI(Person p){
+    return p.weightinKilos/(p.heightinMeters*p.heightinMeters);
+}
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+   Person mikey;
+    
+    mikey.heightinMeters= 34.0;
+    mikey.weightinKilos = 45;
+    
+     Person abhi;
+    abhi.heightinMeters= 578.9;
+    abhi.weightinKilos=89;
+    printf("%f\n",mikey.heightinMeters);
+    float a;
+    a = BMI(mikey);
+    printf("%.2f\n",a);
+    
+  
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
